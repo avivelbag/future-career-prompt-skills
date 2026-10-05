@@ -1,0 +1,92 @@
+---
+name: reskilling-coach-for-displaced-workers
+description: "Prompt playbook for a reskilling coach for displaced workers. Use when a reskilling coach for displaced workers wants help with work tasks such as: transferable skills map; training provider vetting; individual employment plan draft; layoff Rapid Response briefing; regional demand analysis; hard conversation prep; funder outcomes report; coach upskilling on AI-era work."
+---
+
+# Reskilling coach for displaced workers prompts
+
+Reskilling coaches help workers displaced by automation, AI, plant closures or trade shifts move into new occupations, working for workforce boards and American Job Centers (WIOA), employer outplacement and Rapid Response programs, unions, community colleges, or national schemes like SkillsFuture and the EU Globalisation Adjustment Fund. AI helps most with skills-transfer mapping against O*NET/ESCO, vetting training options and labor-market data, drafting individual plans and funder reports, and preparing for hard conversations, while the coach keeps the human relationship, eligibility decisions and accountability.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Transferable skills map
+
+**Task:** Translate a displaced worker's past job into adjacent target occupations
+
+```text
+You are assisting a reskilling coach. My client worked [YEARS] years as [JOB TITLE] at [INDUSTRY/EMPLOYER TYPE], doing: [KEY DUTIES, TOOLS, CERTIFICATIONS]. Their constraints: [LOCATION/COMMUTE, SCHEDULE, PHYSICAL LIMITS, WAGE FLOOR, TRAINING TIME AVAILABLE]. Using O*NET-style skills, knowledge and work-activity categories, list their likely transferable skills, then propose 5 target occupations ranked by skill overlap and realistic entry path. For each, give: the O*NET-SOC title/code if you know it, overlapping skills, skill gaps, typical credential needed, and estimated training time. Mark any code, wage or outlook figure I should verify on O*NET OnLine or local LMI before sharing with the client.
+```
+
+> **Caution:** Verify SOC codes, wages and outlook on O*NET/BLS or state LMI; do not paste the client's name or identifiers.
+
+## 2. Training provider vetting
+
+**Task:** Compare training programs before a client commits funding or time
+
+```text
+I'm a reskilling coach comparing training options for a client targeting [TARGET OCCUPATION] in [REGION]. Programs: [PASTE NAME, COST, LENGTH, FORMAT, CREDENTIAL, STATED PLACEMENT RATE, ON ETPL? Y/N for each]. Build a comparison table covering cost, time to credential, whether the credential is industry-recognized or stackable, evidence quality behind outcome claims, schedule fit for someone [WORKING/CAREGIVING/ON UI], and red flags (unverifiable placement rates, high-pressure enrollment, loan-heavy financing). Then list the 8 questions I should ask each provider and what documentation to request. Note where WIOA ITA eligibility or Eligible Training Provider List status needs confirming with my local workforce board.
+```
+
+> **Caution:** Funding eligibility is decided by the workforce board, not the model; confirm ETPL status directly.
+
+## 3. Individual employment plan draft
+
+**Task:** Draft a structured IEP/action plan from intake notes
+
+```text
+Act as a workforce coaching assistant. From these de-identified intake notes: [PASTE NOTES: work history, education, barriers, goals, supports], draft an Individual Employment Plan in the style used by WIOA-funded American Job Centers. Sections: career goal (short and long term), assessed strengths, barriers and supportive services needed (e.g., transportation, childcare, digital skills), training plan with milestones and dates, job search activities, and check-in schedule. Write goals as SMART statements, in plain language the client can read and co-own. Flag any barrier that may need a referral (mental health, legal, benefits counseling) rather than coaching, and leave [CLIENT DECISION] markers where the client should choose.
+```
+
+> **Caution:** Plans must be co-created and signed with the client; follow your agency's IEP template and confidentiality rules.
+
+## 4. Layoff Rapid Response briefing
+
+**Task:** Prepare an on-site briefing for a group facing mass layoff
+
+```text
+I'm coordinating a Rapid Response session for [NUMBER] workers being laid off from [EMPLOYER/FACILITY TYPE] in [STATE/COUNTRY] on [DATE], due to [AUTOMATION/CLOSURE/RELOCATION]. Workforce mix: [ROLES, AGE RANGE, LANGUAGES, UNION Y/N]. Draft (1) a 20-minute session outline, (2) a one-page plain-language handout at about a 6th-grade reading level covering unemployment insurance filing, health coverage options, American Job Center services, and training funding, and (3) a list of likely questions with answers I must fill in locally. Mark every benefit amount, deadline or program (e.g., WARN notice, Trade Adjustment Assistance status, COBRA) as [VERIFY LOCALLY], since rules vary by state and change.
+```
+
+> **Caution:** TAA and UI rules change and vary by jurisdiction; have the state workforce agency confirm all benefit facts.
+
+## 5. Regional demand analysis
+
+**Task:** Assess which occupations are actually hiring before steering clients
+
+```text
+Help me, a reskilling coach in [REGION], decide which target occupations to prioritize for clients displaced from [SECTOR]. I'll paste data: [JOB POSTING COUNTS, STATE LMI PROJECTIONS, WAGE DATA, EMPLOYER PARTNER HIRING PLANS]. Analyze: demand strength, wage level vs. clients' prior wages, entry barriers, automation/AI exposure of the target role over 5-10 years, and whether demand is concentrated in a few employers. Output a ranked table plus a short memo on risks (e.g., retraining into another role likely to be automated). State where evidence is thin or forecasts disagree, and avoid presenting AI-exposure estimates as settled fact.
+```
+
+> **Caution:** AI-exposure research is contested and fast-moving; treat rankings as one input, not a prescription.
+
+## 6. Hard conversation prep
+
+**Task:** Prepare for a sensitive session with a discouraged or resistant client
+
+```text
+I'm a reskilling coach preparing for a session with a client, [AGE RANGE, PRIOR ROLE, TENURE], who lost their job [TIME AGO] and is [ANGRY/DISCOURAGED/REJECTING RETRAINING/ANXIOUS ABOUT AGE OR TECH]. What they've said: [QUOTES OR SUMMARY]. Using motivational interviewing principles, give me: 3 opening approaches, open questions that explore their own reasons for change, reflections for likely pushback, and ways to acknowledge loss and identity without false reassurance. Include signs that suggest referral to mental health or crisis services, and what I should say in that case. Keep suggestions respectful and non-scripted-sounding.
+```
+
+> **Caution:** Not a substitute for clinical care; know your agency's crisis and referral protocol (e.g., 988 in the US).
+
+## 7. Funder outcomes report
+
+**Task:** Draft a performance narrative for a grant or workforce board
+
+```text
+Draft a quarterly outcomes report for [FUNDER: workforce board / foundation / employer outplacement contract] on my reskilling cohort. Aggregate data only: [ENROLLED, COMPLETED TRAINING, CREDENTIALS EARNED, EMPLOYED 2ND/4TH QUARTER AFTER EXIT, MEDIAN EARNINGS, WAGE REPLACEMENT RATE, DROPOUTS AND REASONS]. Align terms with WIOA primary indicators of performance where applicable, explain variances against targets [TARGETS], include 2 anonymized success stories [CONSENTED SUMMARIES], and a lessons-learned section on what to change. Format: executive summary, metrics table, narrative, next-quarter actions. Do not invent numbers; flag any gaps as [DATA NEEDED].
+```
+
+> **Caution:** Use only aggregate or consented data; check small-cell counts that could re-identify clients.
+
+## 8. Coach upskilling on AI-era work
+
+**Task:** Build the coach's own knowledge of how AI is reshaping target occupations
+
+```text
+I coach displaced workers and need to stay current on how AI and automation are changing [TARGET OCCUPATIONS OR SECTOR]. Create a 4-week self-study plan (about 3 hours/week) covering: which tasks in these roles are being automated vs. augmented, new skills employers are asking for, relevant credentials, and policy developments (e.g., WIOA reauthorization, AI-related workforce initiatives, EU AI Act provisions affecting hiring tools). For each week give learning goals, types of sources to consult (BLS, O*NET, OECD, ILO, employer surveys), a practical exercise using a real client scenario [DE-IDENTIFIED SCENARIO], and questions to check my understanding. Distinguish established evidence from speculation and note what you may be out of date on.
+```
+
+> **Caution:** Verify policy status yourself; workforce legislation and AI rules are changing quickly.

@@ -1,0 +1,88 @@
+---
+name: vertical-farm-manager
+description: "Prompt playbook for a vertical farm manager. Use when a vertical farm manager wants help with work tasks such as: daily environment and fertigation review; crop problem differential diagnosis; energy cost per kilogram model; food safety plan and FSMA 204 traceability; planting and harvest schedule against orders; buyer communication on a supply shortfall; automation and capex investment memo; upskilling plan for a new CEA manager."
+---
+
+# Vertical farm manager prompts
+
+Runs an indoor, climate-controlled farm (operators like Gotham Greens, 80 Acres Farms and Oishii), balancing crop yield, energy cost, food safety and labor in a sector where several well-funded farms (Bowery, AeroFarms, Plenty) have failed or gone through bankruptcy on unit economics. AI helps most with reading sensor and yield data, troubleshooting crop problems, energy and cost modeling, food-safety documentation, and buyer communications.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Daily environment and fertigation review
+
+**Task:** Spot drift in climate and nutrient data before it costs a crop
+
+```text
+You are an experienced controlled-environment agriculture (CEA) grower. Here are the last [24 HOURS / 7 DAYS] of readings for grow room [ROOM ID] growing [CROP AND VARIETY] at [GROWTH STAGE]: air temp, RH, CO2, PPFD/DLI, root-zone temp, EC, pH and dissolved oxygen [PASTE DATA OR SUMMARY]. My targets are [SETPOINTS]. Calculate VPD from the temp and RH, and flag any readings outside the target ranges or drifting toward them. For each flag, give the likely crop impact (for example tipburn, bolting or root rot risk), how urgent it is, and the first check or adjustment to make. Output a table first, then a 5-line shift-lead summary. Say where you are assuming sensor accuracy.
+```
+
+> **Caution:** Confirm suspicious readings with a calibrated handheld meter before changing setpoints; sensor drift is a common false alarm.
+
+## 2. Crop problem differential diagnosis
+
+**Task:** Troubleshoot a symptom across racks before it spreads
+
+```text
+Act as a hydroponic crop diagnostician. In [SYSTEM TYPE: NFT / DWC / ebb-and-flow / aeroponic], [CROP] shows [SYMPTOMS: e.g. brown roots, leaf-edge burn, interveinal chlorosis, stunting], starting on [DATE] in [LOCATION: racks/tiers/zones]. Recent changes: [NUTRIENT BATCH, SEED LOT, SETPOINT CHANGES, SANITATION EVENTS]. Water temp [X], DO [X], EC/pH [X]. Give a ranked differential covering nutrient disorders, environmental stress, and pathogens such as Pythium and Fusarium. For each candidate, list the supporting and contradicting evidence, a test that would confirm it (for example a lab tissue or water analysis, or root plating), and an action I can take now while I wait for results. Note any spread pattern that points to the irrigation loop being the source.
+```
+
+> **Caution:** Treat this as a hypothesis list. Confirm pathogens with a lab, and only use crop-protection products labeled for indoor or hydroponic use on that crop.
+
+## 3. Energy cost per kilogram model
+
+**Task:** Find where kWh/kg can actually be cut
+
+```text
+You are a CEA energy analyst. My farm: [GROW AREA m2], [NUMBER OF TIERS], LED fixtures at [µmol/J EFFICACY], photoperiod [HOURS], HVAC/dehumidification type [TYPE], electricity tariff [RATE, TIME-OF-USE AND DEMAND CHARGES], monthly kWh [DATA], and saleable output [kg/month BY CROP]. Build a breakdown of kWh per kg and energy cost per kg, split into lighting, HVAC/dehumidification, pumps and other loads. Then rank 6 to 8 levers, such as shifting the photoperiod to off-peak hours, DLI trimming, raising crop density, fixture upgrades, and heat recovery. For each lever, estimate savings, capex, payback, and the risk to yield or quality. Show the formulas you used, and mark which inputs drive the result most.
+```
+
+> **Caution:** These are planning estimates. Validate the big moves with a trial on one room and with the utility's own tariff analysis.
+
+## 4. Food safety plan and FSMA 204 traceability
+
+**Task:** Draft or gap-check food-safety and traceability documentation
+
+```text
+Act as a produce food-safety consultant. We grow [CROPS] indoors in [STATE/COUNTRY], sell to [RETAIL / FOODSERVICE BUYERS], and are audited against [PrimusGFS / SQF / GLOBALG.A.P. / buyer standard]. Our current practices: [WATER SOURCE AND TREATMENT, SANITATION SOP, WORKER HYGIENE, ENVIRONMENTAL MONITORING, LOT CODING]. Do a gap analysis against the FSMA Produce Safety Rule and the FSMA 204 Food Traceability Rule. Leafy greens and fresh herbs are on the Food Traceability List, so cover Critical Tracking Events and Key Data Elements. Output a table with columns requirement | current state | gap | fix | owner. Then draft a one-page traceability lot-code SOP. Flag any requirement whose compliance date or interpretation you are unsure of.
+```
+
+> **Caution:** Regulatory deadlines have shifted (the FSMA 204 compliance date was extended), so verify current dates with FDA and your auditor before relying on this.
+
+## 5. Planting and harvest schedule against orders
+
+**Task:** Plan seeding so supply matches buyer commitments
+
+```text
+You are a production planner for a vertical farm. These are the standing and forecast orders for the next [8-12] weeks, by SKU and by week: [PASTE]. For each crop: days from seed to transplant [X], days from transplant to harvest [X], expected yield per tray or per tower [X], recent loss rate [X%], and rack capacity by room [X]. Build a weekly seeding plan that meets the orders with a [X%] buffer, avoids capacity clashes, and staggers harvest labor. Output a week-by-week table: SKU | seed date | trays | room | harvest date | expected kg. Then list any weeks where we will be short or long, along with options such as substituting a SKU, selling surplus to secondary channels, or adjusting density.
+```
+
+## 6. Buyer communication on a supply shortfall
+
+**Task:** Tell a retail buyer about a shortage without losing the account
+
+```text
+Help me write to [BUYER NAME / ROLE] at [RETAILER]. Due to [CAUSE: e.g. root disease in Room 3, HVAC failure, a power outage], we will ship [X%] of the ordered [SKU] for the weeks of [DATES]. We can offer [SUBSTITUTES / PARTIAL VOLUMES / RECOVERY DATE]. Write: (1) a short email, under 150 words, that is factual and leads with the impact and the recovery plan; (2) a 3-bullet phone talk track; and (3) internal notes on what not to promise. Keep the tone accountable, without excuses. Avoid giving any detail that implies a food-safety risk unless [FOOD SAFETY RELEVANT: YES/NO]. If yes, tell me to involve our food-safety lead and follow the recall plan rather than handling it as a supply email.
+```
+
+> **Caution:** Any possible contamination issue goes through your recall or food-safety plan and legal counsel, not a routine supply update.
+
+## 7. Automation and capex investment memo
+
+**Task:** Evaluate an automation purchase for leadership or investors
+
+```text
+Act as a skeptical CEA operations finance advisor. I'm evaluating [EQUIPMENT: e.g. automated seeding line, robotic tray movers, harvest/packing automation, a vision-based crop monitoring system] from [VENDOR] at [COST]. Current labor: [FTEs, WAGE, HOURS PER TASK]. Expected change: [VENDOR CLAIMS]. Write a 1-page memo covering: problem, option, NPV and payback under base, downside and upside cases, operational risks (downtime, maintenance skills, crop variability, vendor viability), and questions to ask the vendor and their reference customers. Note that several heavily automated vertical farms have failed on unit economics, and say what that implies for this decision. End with a recommendation and the conditions under which it would change.
+```
+
+> **Caution:** Vendor claims need site-specific validation. Ask for data from reference farms, not just demos.
+
+## 8. Upskilling plan for a new CEA manager
+
+**Task:** Close knowledge gaps in plant science, systems or business
+
+```text
+I'm a vertical farm manager coming from [BACKGROUND: e.g. field agriculture, manufacturing, software, restaurant operations]. My weak areas are [e.g. plant physiology, HVAC and psychrometrics, nutrient chemistry, food safety, P&L management]. Build a 12-week self-study plan at [HOURS PER WEEK]. For each week, give the concept, why it matters on the farm floor, a hands-on exercise using our own data or equipment, and a self-check question. Point to real resources, such as university CEA extension programs (Cornell CEA, Ohio State, University of Arizona CEAC), the Produce Safety Alliance grower training, and standard texts on hydroponics and lighting (DLI, PPFD, photon efficacy). Don't invent course names. If you're unsure whether a resource exists, say so.
+```

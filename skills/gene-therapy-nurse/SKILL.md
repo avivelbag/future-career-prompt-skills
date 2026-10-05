@@ -1,0 +1,92 @@
+---
+name: gene-therapy-nurse
+description: "Prompt playbook for a gene therapy nurse. Use when a gene therapy nurse wants help with work tasks such as: infusion-day nursing checklist; post-AAV liver monitoring tracker; family teaching sheet; adverse event narrative draft; shedding and biosafety Q&A for staff; long-term follow-up planner; conditioning and cell therapy transition brief; upskilling study plan."
+---
+
+# Gene therapy nurse prompts
+
+Specialty nurses at academic medical centers, qualified treatment centers and trial sites who coordinate, administer and monitor approved and investigational cell and gene therapies (AAV vectors such as Zolgensma, Hemgenix and Elevidys, ex vivo edited cells such as Casgevy, CAR-T). They manage handling under biosafety rules, infusion reactions, steroid and liver monitoring, and 15-year follow-up. AI helps most with drafting protocols and teaching materials, organizing monitoring schedules, explaining complex therapies to families, and learning a fast-changing field, while the nurse and prescribers stay clinically accountable.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Infusion-day nursing checklist
+
+**Task:** Turn a product label and institutional policy into a step-by-step infusion-day checklist
+
+```text
+You are an experienced cell and gene therapy nurse educator. Using the excerpts I paste below from the prescribing information for [PRODUCT NAME] and our institutional policy [POLICY EXCERPTS], draft an infusion-day nursing checklist for [PATIENT POPULATION, e.g. pediatric SMA under 2 years]. Organize it as: pre-infusion verification (identity/chain of identity, consent, labs, premedication and steroid start), product receipt and handling (thaw, storage, biosafety level and PPE per our IBC), administration, vital-sign and reaction monitoring intervals, spill and waste handling, and discharge criteria. Cite which pasted source each step comes from, and mark any step where the sources are silent or conflict as [NEEDS PHARMACY/PI REVIEW]. Do not add doses or timings not in the sources.
+```
+
+> **Caution:** Draft only; must be reviewed against the current label and approved by pharmacy, the treating physician and the Institutional Biosafety Committee before use.
+
+## 2. Post-AAV liver monitoring tracker
+
+**Task:** Build a lab and steroid-taper monitoring schedule after AAV gene therapy
+
+```text
+Act as a clinical coordinator for an AAV gene therapy program. Patient treated with [PRODUCT] on [INFUSION DATE], weight [KG], baseline labs [VALUES]. Our protocol requires [PASTE PROTOCOL: lab panel, frequency, steroid regimen, taper rules, escalation thresholds]. Produce: 1) a week-by-week table for the first [N] weeks showing lab draws, steroid dose step, clinic or phone contacts and who is responsible; 2) a list of the protocol's escalation thresholds (e.g. transaminase rise, platelet drop, troponin) phrased as 'if X, notify Y within Z'; 3) questions I should confirm with the prescriber where the protocol is ambiguous. Use only the thresholds I provide; do not invent clinical cutoffs.
+```
+
+> **Caution:** Hepatotoxicity, including fatal acute liver failure, has been reported with AAV therapies; escalation decisions belong to the treating team, not the tracker.
+
+## 3. Family teaching sheet
+
+**Task:** Write a plain-language teach-back sheet for caregivers before gene therapy
+
+```text
+You are a pediatric gene therapy nurse writing for caregivers at a [READING LEVEL, e.g. 6th grade] level in [LANGUAGE]. Using the facts I paste [KEY FACTS FROM LABEL/CONSENT AND OUR TEAM'S INSTRUCTIONS], write a one-page sheet for [THERAPY] covering: what the treatment does and does not do, what happens on infusion day, the steroid medicine and why missing doses matters, warning signs that require a call (with our number [PHONE]) versus 911, hygiene precautions for vector shedding if our team specifies them, and long-term follow-up visits. End with 5 teach-back questions. Avoid promises about outcomes and flag any statement you could not ground in my pasted facts.
+```
+
+> **Caution:** Have the treating physician review; outcomes vary and families must not read it as a guarantee.
+
+## 4. Adverse event narrative draft
+
+**Task:** Draft a clear, factual adverse event narrative for a trial or safety report
+
+```text
+Act as a clinical research nurse experienced with gene therapy trials. From my de-identified notes [PASTE TIMELINE: dates as study days, symptoms, vitals, labs, interventions, outcome], draft an adverse event narrative suitable for the sponsor's eCRF/SAE form under protocol [PROTOCOL ID]. Structure: onset and description, relevant history and concomitant meds, investigations, treatment, outcome and current status. Keep it chronological and factual, use CTCAE v[VERSION] terminology where the grade is stated in my notes, and do NOT assign causality or seriousness—leave [INVESTIGATOR ASSESSMENT] placeholders. List any missing data a monitor would query.
+```
+
+> **Caution:** Use de-identified data only; causality, seriousness and reporting timelines are the investigator's determination.
+
+## 5. Shedding and biosafety Q&A for staff
+
+**Task:** Prepare a staff briefing on vector handling, shedding and exposure response
+
+```text
+You are a gene therapy nurse preparing a 10-minute huddle for [UNIT, e.g. inpatient pediatric floor] staff about a patient receiving [PRODUCT/VECTOR TYPE]. Based on the label's shedding information and our IBC-approved procedures [PASTE], produce: a one-paragraph explanation of the vector and why it is or isn't a transmission concern, PPE and waste rules per our biosafety level, how long excreta precautions last, what to do after a needlestick or splash, and who to call. Add a short FAQ for likely staff worries (pregnant staff, immunocompromised family). Distinguish clearly between what the sources state and general background, and flag open questions for the biosafety officer.
+```
+
+> **Caution:** Follow NIH Guidelines and the institution's IBC rulings; do not substitute AI text for occupational health advice.
+
+## 6. Long-term follow-up planner
+
+**Task:** Plan and track the 15-year long-term follow-up visits for treated patients
+
+```text
+Act as a long-term follow-up (LTFU) coordinator for gene therapy patients, aware that FDA guidance recommends up to 15 years of follow-up for integrating vectors and genome editing and around 5 years for many AAV products. For our cohort [DE-IDENTIFIED LIST: study ID, product, treatment date, registry or protocol enrolled in], with our LTFU requirements [PASTE SCHEDULE], produce: a visit calendar per patient for the next [N] years, a list of assessments per visit (e.g. malignancy screening, insertion-site analysis samples if required), a retention-risk checklist (moves, transition from pediatric to adult care), and a template contact-update message. Flag where the product's requirements are unclear.
+```
+
+> **Caution:** Confirm requirements with the sponsor/registry; scheduling aids don't replace the protocol.
+
+## 7. Conditioning and cell therapy transition brief
+
+**Task:** Prepare a handoff summary for patients moving through conditioning to ex vivo edited cell infusion
+
+```text
+You are a cell and gene therapy nurse writing a shift handoff for a patient receiving [PRODUCT, e.g. Casgevy or Lyfgenia] after [CONDITIONING REGIMEN]. From my de-identified notes [PASTE], create an SBAR handoff with: current day relative to infusion, conditioning drug levels or pending pharmacokinetic results, mucositis/infection/neutropenic precautions, transfusion and line status, pain plan for sickle cell history, engraftment markers to watch, and pending tasks with times. Then list the three highest-risk items for the next 12 hours based only on the data given, and note anything missing.
+```
+
+> **Caution:** Handoff support only; clinical decisions and orders remain with the oncology/transplant team.
+
+## 8. Upskilling study plan
+
+**Task:** Build a learning plan to move into gene therapy nursing
+
+```text
+I am a [CURRENT ROLE, e.g. pediatric oncology RN with BMT experience] moving into a gene therapy nurse role at [SETTING: qualified treatment center / trial site]. Create a 12-week self-study plan covering: vector biology basics (AAV vs lentiviral vs CRISPR-edited cells), approved products and their key nursing risks, NIH Guidelines and biosafety levels, GCP and ICH E6 for trial work, FACT accreditation standards for immune effector cells, chain of identity/custody, LTFU obligations, and payer/access issues. For each week give objectives, suggested sources (e.g. ASGCT patient education, FDA labels, ONS or ASTCT resources), and a self-quiz. Note that the approved-product list changes often and tell me what to verify as current.
+```
+
+> **Caution:** Check that product approvals, label changes and safety communications are current; this field changes month to month.

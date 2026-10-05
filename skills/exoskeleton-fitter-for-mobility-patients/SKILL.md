@@ -1,0 +1,92 @@
+---
+name: exoskeleton-fitter-for-mobility-patients
+description: "Prompt playbook for an exoskeleton fitter for mobility patients. Use when an exoskeleton fitter for mobility patients wants help with work tasks such as: candidacy screening checklist; fit and alignment troubleshooting; session progress note; medical necessity and appeal letter; home-use readiness and caregiver training plan; adverse event and incident review; patient and family explainer; learning plan across devices and standards."
+---
+
+# Exoskeleton fitter for mobility patients prompts
+
+A clinician-technician, usually a physical therapist, orthotist or rehab engineer, who screens, fits, adjusts and trains patients on powered exoskeletons such as ReWalk, EksoNR, Indego and Wandercraft. Today the work happens in rehab hospitals and VA clinics; as reimbursement grows (CMS HCPCS K1007), it is expanding into home use. Claude helps most with screening checklists, interpreting fit and gait data, insurance and medical-necessity paperwork, patient education, and keeping track of manufacturer-specific protocols and FDA labeling limits.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Candidacy screening checklist
+
+**Task:** Prepare a structured screen of a referred patient against a device's labeled indications and contraindications
+
+```text
+You are assisting a certified exoskeleton fitter (PT/orthotist) at [CLINIC TYPE]. A patient has been referred for [DEVICE, e.g. ReWalk Personal 6.0 / EksoNR / Indego]. Patient summary (de-identified): diagnosis [e.g. T10 complete SCI, ASIA A], height [X], weight [X], hip/knee ROM [VALUES], spasticity [MAS SCORES], bone density [DEXA RESULT], skin status [NOTES], upper-body strength and crutch use [NOTES], cardiovascular history [NOTES]. Using the device's FDA-cleared indications and the manufacturer labeling I paste here: [PASTE LABELING EXCERPT], produce a table with each criterion, the patient's value, met / not met / needs assessment, and the evidence. Then list open questions to resolve before a trial fitting. Do not make the final candidacy decision.
+```
+
+> **Caution:** Rely on the current manufacturer labeling, not Claude's memory of it; the final candidacy decision belongs to the treating clinician and prescribing physician.
+
+## 2. Fit and alignment troubleshooting
+
+**Task:** Diagnose gait or comfort problems after an initial fitting
+
+```text
+Act as a rehab engineering consultant helping me troubleshoot an exoskeleton fitting. Device: [MODEL AND SIZE SETTINGS]. Patient: [HEIGHT, LIMB SEGMENT LENGTHS, DIAGNOSIS]. Observations: [e.g. knee joint migrates proximally, redness at anterior tibial strap after 20 min, lateral trunk lean in stance, short step length on right]. Device log/parameters: [STEP HEIGHT, STEP LENGTH, SWING TIME, TILT THRESHOLD, ASSISTANCE LEVEL]. List the most likely causes, ranked, separating joint-axis misalignment, segment length, strap/cuff placement, parameter settings and patient factors. For each, give the check I should perform and the adjustment to try, staying within manufacturer-permitted adjustments. Flag anything that should stop the session, such as skin breakdown, autonomic dysreflexia signs or a fall risk.
+```
+
+> **Caution:** Only make adjustments allowed by the manufacturer's training and IFU; stop the session and escalate any skin injury or AD symptoms.
+
+## 3. Session progress note
+
+**Task:** Turn raw session data into a documentation-ready progress note
+
+```text
+You are helping me write a skilled therapy progress note for an exoskeleton gait session. Here are my rough notes and device data: [PASTE: date, device, settings, steps taken, walk time, assistance level, assist from therapist (min/mod/max), 10MWT or 6MWT results, vitals pre/post, skin check, patient-reported fatigue/pain, goals]. Write the note in SOAP format, using objective measures and wording that documents skilled intervention and medical necessity. Then add a short 'progress toward goals' table comparing against prior sessions: [PRIOR VALUES]. Mark any gaps in my data that a payer or auditor would expect instead of filling them in.
+```
+
+> **Caution:** Remove direct identifiers before pasting unless you are using a HIPAA-compliant setup with a BAA; review every number against the source.
+
+## 4. Medical necessity and appeal letter
+
+**Task:** Draft a letter of medical necessity or a denial appeal for a personal-use exoskeleton
+
+```text
+Help me draft a letter of medical necessity for a personal-use powered exoskeleton ([DEVICE], HCPCS [K1007 or other code]) for a patient covered by [PAYER: Medicare / VA / commercial plan name]. Clinical facts: [DIAGNOSIS, LEVEL OF INJURY, FUNCTIONAL STATUS, TRAINING SESSIONS COMPLETED, OUTCOME MEASURES, HOME ENVIRONMENT, CAREGIVER AVAILABILITY]. If this is an appeal, the denial reason is: [PASTE]. Structure: patient summary, functional need, completed clinical trial and outcomes, expected benefits supported by citable published evidence, safety and training plan, and a direct answer to each denial reason. List which payer policy or LCD sections I should verify and quote, and mark every claim that needs a citation I must confirm.
+```
+
+> **Caution:** Verify current payer policy and fee-schedule details yourself; coverage rules for exoskeletons changed in 2024 and are still evolving. Never let Claude invent study citations.
+
+## 5. Home-use readiness and caregiver training plan
+
+**Task:** Plan the transition from clinic training to independent home and community use
+
+```text
+You are an exoskeleton training coordinator. Build a home-transition plan for a patient moving to personal use of [DEVICE]. Inputs: required companion/caregiver per labeling [YES/NO AND DETAILS], caregiver's background [DETAILS], home layout [stairs, thresholds, flooring, doorway widths], community goals [e.g. walking at work, curbs], and current skill level [sit-to-stand, turns, ramps, stairs if cleared]. Output: (1) a competency checklist covering donning/doffing, transfers, falls and safe-stop procedures, charging, and daily skin checks, with sign-off criteria; (2) a home-environment modification list; (3) a 6-week follow-up schedule; (4) emergency and device-fault instructions written at a 6th-grade reading level.
+```
+
+> **Caution:** Competency sign-off and clearance for each environment (stairs, outdoors) are clinical decisions governed by the device's labeling.
+
+## 6. Adverse event and incident review
+
+**Task:** Structure the review of a fall, injury or device malfunction
+
+```text
+Help me run a structured review of an exoskeleton incident. Facts: [DATE, SETTING, DEVICE AND SERIAL, SOFTWARE VERSION, ACTIVITY, WHAT HAPPENED, INJURIES, DEVICE ERROR CODES/LOGS, STAFF PRESENT, GUARDING TECHNIQUE]. Produce: (1) a neutral timeline; (2) contributing factors grouped as device, fit/settings, patient, staff/procedure, and environment; (3) immediate corrective actions; (4) what to notify, including the manufacturer complaint process, a possible FDA MedWatch/MDR report (explain the user-facility versus voluntary reporting thresholds and tell me to confirm them), and internal risk management; (5) questions I still need to answer. Do not assign blame or reach conclusions the facts don't support.
+```
+
+> **Caution:** Preserve the device and its logs, and follow your facility's risk-management and FDA reporting procedures; Claude's summary of reporting rules has to be checked.
+
+## 7. Patient and family explainer
+
+**Task:** Set realistic expectations for a patient considering an exoskeleton
+
+```text
+Write a plain-language explainer for a patient with [CONDITION] and their family who are considering a [DEVICE] exoskeleton at [CLINIC]. Cover: what the device can and cannot do (a walking aid for set activities, not a cure or a wheelchair replacement for most users), the typical training commitment [NUMBER OF SESSIONS / WEEKS], physical requirements and risks (falls, skin pressure, bone fragility, autonomic dysreflexia where relevant), the role of a trained companion, cost and insurance realities, and evidence on benefits stated with honest uncertainty. Use a reading level around grade 7, short sections, and end with 10 questions they should ask us. Tone: warm and hopeful without overpromising.
+```
+
+> **Caution:** Have a clinician review the explainer before giving it to patients, and adapt the device-specific claims to the current labeling.
+
+## 8. Learning plan across devices and standards
+
+**Task:** Upskill on new devices, standards and evidence
+
+```text
+I am a [PT / orthotist / rehab engineer] with [BACKGROUND] who wants to become a competent exoskeleton fitter across several devices within [TIMEFRAME]. Build a study plan covering: biomechanics of assisted gait, SCI and stroke considerations, the FDA regulatory pathway for powered exoskeletons (21 CFR 890.3480, Class II with special controls), relevant standards work (ISO 13482, the ASTM F48 exoskeleton committee, IEC 60601-1 electrical safety), manufacturer certification programs, outcome measures (10MWT, 6MWT, TUG, WISCI II), and reimbursement basics. For each module give learning objectives, primary sources to read, a hands-on activity and a self-test question. Separate settled knowledge from areas where standards or evidence are still forming.
+```
+
+> **Caution:** Device-specific certification from the manufacturer is still required before you fit patients; check that cited standards are the current editions.

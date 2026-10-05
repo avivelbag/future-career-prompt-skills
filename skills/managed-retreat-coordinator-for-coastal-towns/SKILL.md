@@ -1,0 +1,92 @@
+---
+name: managed-retreat-coordinator-for-coastal-towns
+description: "Prompt playbook for a managed retreat coordinator for coastal towns. Use when a managed retreat coordinator for coastal towns wants help with work tasks such as: retreat-zone screening from parcel and SLR data; hMA buyout application narrative; plain-language resident FAQ; public meeting prep and hard questions; phased retreat and infrastructure plan; equity and displacement risk review; program status report to funders and council; upskilling study plan."
+---
+
+# Managed retreat coordinator for coastal towns prompts
+
+Works for a town, county, state resilience office or buyout program (analogues today: NJ Blue Acres, FEMA HMGP-funded acquisitions, the Isle de Jean Charles resettlement, Newtok-to-Mertarvik in Alaska, Fairbourne in Wales) to plan and run the voluntary, phased relocation of residents and infrastructure away from eroding or repeatedly flooded coastlines. AI helps most with synthesizing sea-level and parcel data, drafting grant and environmental review documents, preparing plain-language and multilingual resident communications, and keeping complex multi-year, multi-funder programs auditable; the human coordinator keeps accountability for fairness, consent and every decision about people's homes.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Retreat-zone screening from parcel and SLR data
+
+**Task:** Prioritize parcels or neighborhoods for buyout outreach using hazard and loss data
+
+```text
+You are assisting a managed retreat coordinator for [TOWN/COUNTY, STATE]. Attached is a parcel table with columns [LIST: parcel ID, elevation, FEMA flood zone, NFIP repetitive-loss/severe-repetitive-loss flag, claims history, assessed value, owner-occupied, critical-facility flag]. We use the NOAA 2022 Sea Level Rise Technical Report [SCENARIO, e.g. Intermediate] for [YEAR]. Propose a transparent, tiered screening method (state each criterion and weight and why), apply it, and return: (1) a ranked table of tiers with counts, (2) clusters where contiguous acquisition makes sense versus scattered 'checkerboard' buyouts, (3) data gaps and assumptions. Do not score on race, income or language; instead list where equity review should be applied separately by staff.
+```
+
+> **Caution:** Screening is decision support only; final eligibility and outreach lists must be set by the program under its adopted criteria and reviewed for equity and fair housing impacts.
+
+## 2. HMA buyout application narrative
+
+**Task:** Draft the project narrative and benefit-cost framing for a FEMA Hazard Mitigation Assistance acquisition
+
+```text
+Act as a hazard mitigation grant writer. Draft the project narrative for a FEMA [HMGP / FMA / current HMA program] property acquisition and demolition application for [NUMBER] structures in [COMMUNITY]. Inputs: [LOSS HISTORY], [SLR/EROSION PROJECTIONS], [LOCAL HAZARD MITIGATION PLAN REFERENCE], [COST ESTIMATE], [PROPOSED OPEN-SPACE USE]. Structure it as: problem statement, scope of work, alignment with the hazard mitigation plan, open-space deed restriction commitments (44 CFR Part 80), benefit-cost approach (note where FEMA BCA Toolkit inputs or pre-calculated benefits for SFHA acquisitions may apply), environmental/historic review needs (NEPA, NHPA Section 106), and timeline. Mark every factual claim I must verify with [VERIFY], and flag any program rules that have changed recently or that you're unsure are still current.
+```
+
+> **Caution:** FEMA program availability and rules have changed repeatedly (e.g. BRIC's 2025 status); confirm the current Notice of Funding Opportunity before relying on any requirement.
+
+## 3. Plain-language resident FAQ
+
+**Task:** Explain the voluntary buyout process to affected homeowners and renters
+
+```text
+Write a resident FAQ for [COMMUNITY]'s voluntary buyout program, at roughly a 6th–8th grade reading level, warm but factual, for homeowners and renters in [AREA]. Cover: is it voluntary, how the offer price is set ([PRE-FLOOD FAIR MARKET VALUE / CURRENT FMV / OTHER] per our program rules), what happens to the land, relocation assistance for tenants and owners under the Uniform Relocation Act where federal funds apply, effects on mortgages and NFIP policies, taxes, timelines, and who to call ([CONTACT]). Use only the program facts I provide here: [PROGRAM FACTS]; where a question can't be answered from them, write 'We will confirm this' and list it for me at the end. Then provide a short version for a door-hanger. Note which terms need careful translation into [LANGUAGES].
+```
+
+> **Caution:** Have translations done or checked by qualified human translators and community liaisons; never promise payment amounts or eligibility the program hasn't confirmed.
+
+## 4. Public meeting prep and hard questions
+
+**Task:** Prepare for a contentious town hall on retreat planning
+
+```text
+I'm facilitating a public meeting in [COMMUNITY] about [TOPIC, e.g. a draft managed retreat zone / relocating the wastewater plant]. Audience includes [STAKEHOLDERS: long-time families, second-home owners, fishing businesses, renters, tribal members, school board]. Known tensions: [TENSIONS]. Prepare: (1) a 90-minute agenda that gives residents real input rather than a presentation-only session, (2) the 15 hardest questions likely to come up (property values, 'you're abandoning us', tax base loss, cultural sites, who decides) with honest, non-defensive answer outlines, (3) things I must not say or promise, and (4) how to record and report back what we heard. Draw on lessons from documented retreat cases such as Isle de Jean Charles, Staten Island's Oakwood Beach, and Fairbourne, and say where those lessons may not transfer.
+```
+
+> **Caution:** Commitments made at public meetings can carry legal and trust consequences; clear key messages with counsel and elected officials beforehand.
+
+## 5. Phased retreat and infrastructure plan
+
+**Task:** Sequence multi-decade relocation of homes and public infrastructure using adaptation pathways
+
+```text
+Act as a coastal adaptation planner. Using an adaptation-pathways (dynamic adaptive policy pathways) approach, draft a phased managed retreat framework for [COMMUNITY] covering [ASSETS: homes, roads, water/wastewater, schools, emergency services, cemeteries]. Inputs: [SLR SCENARIOS AND YEARS], [EROSION RATES], [CURRENT PLANS: comprehensive plan, hazard mitigation plan, CZMA-approved state coastal program], [RECEIVING-AREA OPTIONS]. Output: a table of phases with measurable triggers (e.g. nuisance-flood days per year, road closure frequency, insurance availability), actions, responsible agency, likely funding sources, and decision points; then a list of policy tools (rolling easements, setbacks, transfer of development rights, capital-plan restrictions) with legal feasibility questions for [STATE]. Flag uncertainties and where takings law may constrain options.
+```
+
+> **Caution:** Regulatory tools that restrict private property raise takings issues (e.g. Lucas v. South Carolina Coastal Council); have land-use counsel review before adoption.
+
+## 6. Equity and displacement risk review
+
+**Task:** Check a retreat program design for inequitable outcomes before launch
+
+```text
+Review the attached draft buyout/relocation program design for [COMMUNITY] from an equity and fair-housing standpoint. Program details: [ELIGIBILITY RULES, VALUATION METHOD, RELOCATION BENEFITS, RECEIVING AREAS, TIMELINE]. Community context: [DEMOGRAPHICS SUMMARY, TENURE MIX, KNOWN HISTORIC DISCRIMINATION OR DISPLACEMENT]. Identify: who could be left worse off (renters, heirs' property owners without clear title, manufactured-home residents, low-value homes priced out of safer housing, those left behind in a hollowed-out neighborhood); risks under the Fair Housing Act and Title VI; and concrete design changes (e.g. housing incentive top-ups, title-clearing help, group relocation options). Return a risk table: issue, affected group, likelihood, mitigation, evidence needed. Mark where research findings on buyout equity are contested.
+```
+
+> **Caution:** This is an analytical aid, not a civil rights legal review; involve counsel and affected residents directly.
+
+## 7. Program status report to funders and council
+
+**Task:** Turn tracker data into a quarterly progress and compliance report
+
+```text
+Draft a quarterly status report for [AUDIENCE: town council / state resilience office / FEMA grant monitor] on the [PROGRAM NAME] managed retreat program. Inputs: tracker export [PASTE: properties by stage — inquiry, appraisal, offer, accepted, closed, demolished, deed-restricted], budget vs. spend [DATA], milestones [DATA], issues log [DATA]. Output: one-page executive summary, a stage-funnel table with change since last quarter, schedule and budget variance with reasons, compliance items (open-space deed restrictions recorded, URA notices issued, duplication-of-benefits checks done, environmental review status), risks and asks. Do not include personal identifying information about participants; aggregate anything below [THRESHOLD, e.g. 5] households.
+```
+
+> **Caution:** Verify every number against the system of record; participant data may be protected under privacy laws and program agreements.
+
+## 8. Upskilling study plan
+
+**Task:** Build a learning plan for someone moving into managed retreat coordination
+
+```text
+I'm moving into a managed retreat coordinator role in [STATE/COUNTRY] from a background in [BACKGROUND, e.g. planning, emergency management, social work, engineering]. Build me a 12-week study plan covering: coastal hazard science (sea-level rise scenarios, erosion, compound flooding), federal and state funding mechanisms (FEMA HMA, HUD CDBG-DR, state programs like NJ Blue Acres), the Uniform Relocation Act, NFIP and the Community Rating System, land-use law and takings, community engagement and trauma-informed practice, and case studies (Newtok/Mertarvik, Isle de Jean Charles, Grantham in Australia). For each week: learning goals, 2–3 real sources (name them; I'll check availability), a practice exercise, and a self-check question. Flag anything you are unsure still exists or is current.
+```
+
+> **Caution:** Verify cited sources and program names; funding programs and policies change often.

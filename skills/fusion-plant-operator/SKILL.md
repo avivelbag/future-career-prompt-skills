@@ -1,0 +1,92 @@
+---
+name: fusion-plant-operator
+description: "Prompt playbook for a fusion plant operator. Use when a fusion plant operator wants help with work tasks such as: shift turnover summary; disruption post-shot review; magnet quench event report; procedure draft and walkdown check; fusion regulatory landscape brief; tritium accountability reconciliation; public and community explainer; operator upskilling plan."
+---
+
+# Fusion plant operator prompts
+
+Fusion plant operators run the control room of tokamak, stellarator or pulsed fusion machines: plasma shots, superconducting magnets, cryogenics, vacuum, heating systems and tritium handling. Today's analogues are operators at JET (now decommissioning), ITER, Wendelstein 7-X and private builds such as CFS's SPARC and Helion's Polaris, under rules still being written (US NRC byproduct-material framework, UK Energy Act 2023). AI helps most with shift logs, shot and anomaly reviews, procedure drafting, regulatory tracking and learning plasma physics. It must never act as a control or safety system.
+
+## How to use
+
+Find the task below that matches the request. Treat its prompt as the brief: ask the user for any [BRACKETED] details that aren't already in the conversation, then do the work it describes. Respect each caution. This is an emerging role, so check standards, regulations and products named here against current sources. Professional judgment, sign-off and anything regulated stays with the user.
+
+## 1. Shift turnover summary
+
+**Task:** Turn a raw shift log into a structured handover for the next crew
+
+```text
+You are helping a fusion plant control-room operator write a shift turnover. Below is my raw shift log from [MACHINE TYPE, e.g. tokamak / pulsed FRC] covering [SHIFT TIMES]: [PASTE LOG ENTRIES, ALARMS, SHOT NUMBERS]. Produce a turnover in this structure: 1) plant status by system (magnets/cryo, vacuum, heating and current drive, diagnostics, tritium/fuel handling, power supplies); 2) shots run with outcomes and any disruptions or aborts; 3) open alarms, bypasses, inhibits and lockout/tagouts still in effect; 4) work in progress and permits; 5) items needing the oncoming shift lead's decision. Quote shot numbers and times exactly. List anything in the log that is ambiguous or missing instead of guessing.
+```
+
+> **Caution:** Check every status item against live plant displays and the official log. The AI summary is not a record of plant state.
+
+## 2. Disruption post-shot review
+
+**Task:** Organize diagnostic data after a plasma disruption to work out its cause
+
+```text
+Act as a tokamak operations analyst. Shot [SHOT NUMBER] ended in a disruption at [TIME] ms. Here are the key traces and notes: [PASTE PLASMA CURRENT, DENSITY, RADIATED POWER, MODE ACTIVITY/LOCKED-MODE SIGNAL, VERTICAL POSITION, HEATING POWER, OPERATOR NOTES]. Walk through the likely precursor chain, e.g. density limit, locked mode, vertical displacement event or impurity influx, and rank the hypotheses with the evidence for and against each. Then list: which further diagnostics or data would distinguish them; whether disruption mitigation (e.g. massive gas or shattered pellet injection) fired as expected; and suggested changes to the next shot request. Mark clearly where the data is insufficient.
+```
+
+> **Caution:** This is for physics and engineering review only. Changes to operating limits or protection settings follow your facility's approval process.
+
+## 3. Magnet quench event report
+
+**Task:** Draft an event report for a superconducting magnet quench or cryogenic upset
+
+```text
+You are helping me draft an internal event report for a [HTS / LTS] superconducting magnet event at a fusion facility. Facts: [COIL ID, TIME, OPERATING CURRENT, QUENCH DETECTION SIGNAL, DUMP RESISTOR/PROTECTION ACTION, HELIUM PRESSURE AND TEMPERATURE EXCURSIONS, RECOVERY STEPS, PEOPLE INVOLVED BY ROLE]. Write the report in this structure: event summary, timeline table, plant response vs design expectation, immediate actions, apparent cause (labelled preliminary), contributing factors (equipment, procedure, human performance), and corrective actions with owners shown as [TBD]. Keep a neutral, factual tone, and put every inference in a separate 'Analyst notes' section.
+```
+
+> **Caution:** The final cause and corrective actions come from your formal investigation process (e.g. root cause analysis). Don't submit the AI draft as the finding.
+
+## 4. Procedure draft and walkdown check
+
+**Task:** Draft or review an operating procedure for a fusion subsystem
+
+```text
+You are a technical writer experienced in nuclear and high-hazard conduct of operations. Draft a step-by-step operating procedure for [TASK, e.g. cooldown of the toroidal field coils / bake-out of the vacuum vessel / startup of the neutral beam injector] using this source material: [PASTE SYSTEM DESCRIPTION, VENDOR LIMITS, EXISTING PROCEDURE]. Use numbered steps with initial/verification blocks, place cautions and warnings before the step they apply to, define hold points and the acceptance criteria to continue, and give abort criteria. Then list every step where the source material is unclear, values are missing, or a hazard (cryogen asphyxiation, high voltage, magnetic field, tritium, activation) is not addressed.
+```
+
+> **Caution:** Every procedure needs technical review, a walkdown and approval under your facility's document control before use.
+
+## 5. Fusion regulatory landscape brief
+
+**Task:** Understand which regulations and licensing rules apply to my facility
+
+```text
+I'm an operator at a fusion facility in [COUNTRY/STATE] running [MACHINE TYPE AND FUEL, e.g. D-T tokamak / D-He3 pulsed]. Explain the regulatory framework that applies to fusion operations, e.g. in the US the NRC's approach of regulating fusion machines under the byproduct-material framework (10 CFR Part 30) with Agreement State licensing, or in the UK the Energy Act 2023 placing fusion under HSE and the environment agencies rather than the ONR. Cover: radiation protection and ALARA, tritium inventory and accountability, effluent monitoring, worker dose limits and occupational safety (e.g. lockout/tagout). Present it as a table: requirement, source, what it means for shift operators. Flag anything that is proposed rather than final, and note what has changed since your knowledge cutoff that I should check.
+```
+
+> **Caution:** Fusion rules are still being finalized. Confirm every citation against the current regulator text and your licensing staff.
+
+## 6. Tritium accountability reconciliation
+
+**Task:** Reconcile tritium inventory records and find discrepancies
+
+```text
+Act as a tritium accountability assistant for a fusion fuel cycle. Here is this period's data: [PASTE INVENTORY BY LOCATION, e.g. storage beds, fuelling system, torus, exhaust processing, waste; TRANSFERS IN/OUT; STACK AND EFFLUENT MONITOR READINGS; DECAY CORRECTION DATE]. Reconcile beginning inventory + receipts - shipments - decay - releases vs measured ending inventory. Show the arithmetic in a table, compute the inventory difference and compare it to [FACILITY ALERT THRESHOLD]. List likely explanations (measurement uncertainty, holdup in plasma-facing components, unrecorded transfers) and the records I should pull to resolve each one.
+```
+
+> **Caution:** Reportable discrepancies and release limits follow your license and radiation protection program. The AI result does not replace the official accountability record.
+
+## 7. Public and community explainer
+
+**Task:** Explain plant operations or an event to neighbours, media or local officials
+
+```text
+Help me write a plain-language update for [AUDIENCE, e.g. a community advisory board / local news / city council] about [TOPIC OR EVENT, e.g. first D-T campaign / a cryogenic venting event / routine tritium monitoring results]. Approved facts: [PASTE FACTS CLEARED BY COMMUNICATIONS/LICENSING]. Explain how fusion differs from fission in terms of meltdown risk, long-lived waste and fuel, without overselling. Give radiation figures with an everyday comparison and cite a source. Include 5 likely questions with honest answers. Keep it under 400 words at a grade-9 reading level. Mark any sentence that goes beyond the approved facts.
+```
+
+> **Caution:** Public statements about events must go through your facility's communications and regulatory approval process.
+
+## 8. Operator upskilling plan
+
+**Task:** Build a study plan for plasma physics and fusion plant systems
+
+```text
+I am a [BACKGROUND, e.g. former fission reactor operator / Navy nuclear tech / electrical technician] moving into a fusion control-room role at a [TOKAMAK / STELLARATOR / PULSED MAGNETO-INERTIAL] facility. Make me a 12-week study plan of 5 hours a week covering: plasma basics (confinement, beta, Greenwald density limit, disruptions), magnet and cryogenic systems, vacuum and plasma-facing components, heating and current drive, tritium fuel cycle and radiation protection, and plant protection and interlocks. For each week give learning goals, free resources (e.g. MIT OCW, ITER and IAEA material, Freidberg's textbook), 3 self-test questions, and how the topic shows up on shift. End with what I should learn from my facility's own training program instead.
+```
+
+> **Caution:** Qualification as an operator comes only from your facility's training and certification program.
